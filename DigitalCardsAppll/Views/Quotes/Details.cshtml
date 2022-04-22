@@ -1,0 +1,25 @@
+﻿@model QuoteDetailsViewModel
+
+@{ ViewBag.Title = "Details"; }
+
+<section class="py-5">
+    <div class="container">
+        <h1 style="margin: 2%; text-align: center;">Quote</h1>
+        <div>  
+            <div class="form-group">
+                <label for="genre">Genre</label>
+                <input type="number" readonly class="form-control" id="genre" name="Genre" value="@Model.Genre">
+            </div>
+           
+            <div class="form-group">
+                <label for="qnumber">QNumber</label>
+                <input type="text" readonly class="form-control" id="qnumber" name="QNumber" value="@Model.QNumber">
+            </div>
+            <div class="form-group text-center">
+                <div class="button-holder">
+                    <a href="/Quotes/Details?quoteId=@Model.Id" class="btn btn-secondary btn-text-uppercase" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

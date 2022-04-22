@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DigitalCardsAppll</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+       <nav class="navbar navbar-expand-sm navbar-toggleable-sm  @*border-bottom*@ box-shadow mb-3" style="background-color: black"
+            <div class="container">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-3 ">
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Cards" asp-action="Add">Add Card</a>
+
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Stickers" asp-action="Add">Add Sticker</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Quotes" asp-action="Add">Add Quote</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Cards" asp-action="AddBlankCard">Add BlankCard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Cards" asp-action="All">All Cards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Quotes" asp-action="All">All Quotes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Stickers" asp-action="All">All Stickers</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Authors" asp-action="Add">Add Author</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Authors" asp-action="All">All Authors</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Artists" asp-action="Add">Add Artist</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Artists" asp-action="All">All Artists</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Packages" asp-action="All">All Artists</a>
+                        </li>
+                          <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Cards" asp-action="AddBlank">Add BlankC</a>
+                        </li>
+                          <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Cards" asp-action="AllBlank">All Blank</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Packages" asp-action="Add">Add P</a>                      
+                         <partial name="_LoginPartial" />
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <div class="border-top footer text-center text-light mt-md-5 border-0" style="background-color: black">
+                <div class="container" style="background-color: black">
+                    &copy; @DateTime.UtcNow.Year - Digital Cards
+                </div>
+            </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+ @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DigitalCardsAppll</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Register">Register</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Login">Login</a>
+                        </li>
+                    </ul>
+                 
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>*@
+    

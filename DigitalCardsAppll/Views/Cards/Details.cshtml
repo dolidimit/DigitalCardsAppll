@@ -1,0 +1,17 @@
+﻿@model CardDetailsViewModel
+
+<div container>
+    <h4><i>@Model.Title</i></h4>
+    <img src="@Model.ImageUrl"
+         class="card-img-top img-fluid card-image">
+    <h4><i>@Model.Destination</i></h4>
+    <h4><i>@Model.SNumber</i></h4>
+    <h4><i>@Model.QNumber</i></h4>
+    <div class="form-group text-center">
+        <div class="button-holder">
+            <a href="/Cards/Details?cardId=@Model.Id" class="btn btn-primary btn-block text-uppercase">Details</a>
+        </div>
+    </div>
+</div>
+
+

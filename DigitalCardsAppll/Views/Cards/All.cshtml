@@ -1,0 +1,9 @@
+﻿@model IEnumerable<CardAllViewModel>
+
+@{ ViewBag.Title = "All Cards"; }
+
+<partial name="_CardPartial" model="@Model" />
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

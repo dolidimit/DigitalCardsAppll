@@ -1,0 +1,51 @@
+﻿@model IEnumerable<QuoteAllAdminViewModel>
+
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="page-header text-center">
+                    <h class="font-weight-bold font-italic">Quotes Information</h>
+                </div>
+                <div class="component">
+                    <table class="table table-dark table-hover">
+                        <thead class=" table-active">
+                            <tr>
+                                <th scope="col">Author</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Genre</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">QNumber</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Details</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var quote in Model)
+                            {
+                                <tr class="table-light">
+                                    <td>@quote.AuthorName</td>
+                                    <td>@quote.Description</td>
+                                    <td>@quote.Genre</td>
+                                    <td>@quote.Year</td>
+                                    <td>@quote.QNumber</td>
+                                    <td>
+                                        <a class="btn btn-block btn-warning text-white mb-3" href="/Quotes/Edit?quoteId=@quote.Id">Edit</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-block btn-success text-white mb-3" href="/Quotes/Details?quoteId=@quote.Id">Details</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-block btn-dark text-white mb-3" href="/Quotes/Delete?quoteId=@quote.Id">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<StickerAllViewModel>
+
+<div class="row">
+    @foreach (var sticker in Model)
+    {
+    <div class="col-md-3 text-center">
+        <h4><i>@sticker.Title</i></h4>
+        <div class="img">
+            <img src="@sticker.ImageUrl"
+                 class="card-img-top img-fluid card-image">
+            <h6><i>Code: @sticker.SNumber</i></h6>
+        </div>
+
+        <a asp-controller="Stickers" asp-action="Details" asp-route-id=@sticker.Id class="btn btn-dark bg-dark">Add to cart</a>
+        @*<a href="https://mail.google.com/mail/u/0/?view=cm&to&su=Awesome+Blog!&body=https%3A%2F%2Fblog.shahednasser.com%0A&bcc&cc&fs=1&tf=1"
+           title="Share link to">
+            <img src="https://img.icons8.com/color/48/000000/gmail-new.png">
+        </a>*@
+        @*<a href="https://mail.google.com/mail/u/0/?view=cm&to&su=Awesome+Blog!&body=https%3A%2F%2Fblog.shahednasser.com%0A&bcc&cc&fs=1&tf=1" class="btn btn-danger">Share</a>*@
+        @*<a asp-controller="Stickers" asp-action="Edit" asp-route-id="@sticker.Id" class="btn btn-warning">Edit</a>
+        <a asp-controller="Stickers" asp-action="Delete" asp-route-id="@sticker.Id" class="btn btn-danger">Delete</a>*@
+        @*<div>
+            <i class="heart fa fa-heart-o"></i>
+        </div>*@
+    </div>
+    }
+</div>

@@ -1,0 +1,65 @@
+﻿@model CardAddViewModel
+
+@{ ViewBag.Title = "Add Card"; }
+
+<partial name="_CardFormPartial" model="@Model" />
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+@*<input data-toggle="modal" data-target="#exampleModal" type="image" src="https://prod-virtuoso.dotcmscloud.com/dA/188da7ea-f44f-4b9c-92f9-6a65064021c1/heroImage1/PowerfulReasons_hero.jpg" style="width:350px"/>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Template</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label asp-for="Title"></label>
+                            <input asp-for="Title" class="form-control" placeholder="">
+                            <span asp-validation-for="Title" class="small text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Destination"></label>
+                            <input asp-for="Destination" rows="4" class="form-control" placeholder="">
+                            <span asp-validation-for="Destination" class="small text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Receiver"></label>
+                            <input asp-for="Receiver" class="form-control" placeholder="">
+                            <span asp-validation-for="Receiver" class="small text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Model"></label>
+                            <input asp-for="Model" class="form-control" placeholder="">
+                            <span asp-validation-for="Model" class="small text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SNumber"></label>
+                            <input asp-for="SNumber" class="form-control" placeholder="">
+                            <span asp-validation-for="SNumber" class="small text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="QNumber"></label>
+                            <input asp-for="QNumber" class="form-control" placeholder="">
+                            <span asp-validation-for="QNumber" class="small text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PublicView"></label>
+                            <input asp-for="PublicView">
+                            <span asp-validation-for="PublicView" class="small text-danger"></span>
+                        </div>
+                        <input class="btn btn-dark mt-3 justify-content-center" type="submit" value="Create" />
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>*@
+

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ArtistAllAdminViewModel>
+
+@{ ViewBag.Title = "Artists"; }
+
+
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="page-header text-center">
+                    <h class="font-weight-light">Artists</h>
+                </div>
+                <div class="component">
+                    <table class="table table-dark table-hover">
+                        <thead class=" table-active">
+                            <tr>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Image Url</th>
+                                <th scope="col">SImage Url</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Details</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var artist in Model)
+                            {
+                                <tr class="table-light">
+                                    <td>@artist.FullName</td>
+                                    <td>@artist.ImageUrl</td>
+                                    <td>@artist.SImageUrl</td>
+                                    <td>
+                                        <a class="btn  btn-warning text-white mb-3" href="/Artists/Edit?artistId=@artist.Id">Edit</a>
+                                    </td>
+                                    <td>                       
+                                        <a class="btn  btn-success text-white mb-3" href="/Artists/Details?artistId=@artist.Id">Details</a>
+                                    </td>
+                                    <td>                       
+                                        <a class="btn  btn-dark text-white mb-3" href="/Artists/Delete?artistId=@artist.Id">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

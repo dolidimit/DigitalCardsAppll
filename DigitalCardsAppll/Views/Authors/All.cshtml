@@ -1,0 +1,14 @@
+﻿@using DigitalCardsAppll.Models.Author
+
+@model IEnumerable<AuthorAllViewModel>
+
+@{ ViewBag.Title = "All Authors"; }
+
+<partial name="_AuthorPartial" model="@Model" />
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+

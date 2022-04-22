@@ -1,0 +1,15 @@
+﻿@model IEnumerable<QuoteAllViewModel>
+
+<div class="row">
+    @foreach (var quote in Model)
+    {
+        <div class="col-md-4">
+            <div class="card-body text-center">
+                <h4><i>@quote.AuthorName</i></h4>
+                <p><i>@quote.Description></i></p>
+                <a asp-controller="Quotes" asp-action="Details" asp-route-id="@quote.Id" class="btn btn-dark bg-dark">Details</a>
+            </div>
+        </div>
+    }
+</div>
+

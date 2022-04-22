@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ArtistAllViewModel>
+
+<div class="row">
+    @foreach (var artist in Model)
+    {
+        <div class="col-md-4 text-center">
+            <div class="card">
+
+                <img src="@artist.ImageUrl" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>@artist.FullName </b></h4>
+                </div>
+                <img src="@artist.SImageUrl" alt="Avatar" style="width:100%">
+            </div>
+        </div>
+    }
+</div>

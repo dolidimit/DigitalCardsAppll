@@ -1,0 +1,9 @@
+﻿@model IEnumerable<QuoteAllViewModel>
+
+@{ ViewBag.Title = "All Quotes"; }
+
+<partial name="_QuotePartial" model="@Model" />
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

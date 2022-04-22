@@ -1,0 +1,35 @@
+﻿@model UserRegisterFormModel;
+
+    <style>
+        body {
+            background-image: url('https://64.media.tumblr.com/3e27da8348843e32064bf0b65cfa31f5/tumblr_olnw59qe161uoz44so1_400.gifv');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+    <h2 class="text-center text-light">Register</h2>
+    <form class="mx-auto half-width col-5" method="post" action="/Users/Register">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="top-border-line primary-separator"></div>
+        <div class="form-group text-light">
+            <label for="fullname">FullName</label>
+            <input type="text" class="form-control" id="fullname" placeholder="" name="Fullname">
+        </div>
+        <div class="form-group text-light">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="" name="Email">
+        </div>
+        <div class="form-group text-light">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="" name="Password">
+        </div>
+        <div class="form-group text-light">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="" name="ConfirmPassword">
+        </div>
+        <div class="top-border-line primary-separator"></div>
+        <div class="button-holder d-flex justify-content-center">
+            <button type="submit" class="text-white btn bg-dark">Register</button>
+        </div>
+    </form>

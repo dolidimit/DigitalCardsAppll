@@ -1,0 +1,9 @@
+﻿@model IEnumerable<ArtistAllViewModel>
+
+@{ ViewBag.Title = "All Artists"; }
+
+<partial name="_ArtistPartial" model="@Model" />
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
